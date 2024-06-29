@@ -7,11 +7,11 @@ export const getTodoList = createAsyncThunk('todoList/get', async () => {
 });
 
 export const changeTodoDoneStatus = createAsyncThunk('todo/changeDoneStatus', async (id:number) => {
-    const todoId = await setTimeout(() => id, 2000);
-    return {todoId}
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    return {id}
 })
 
 export const deleteTodo = createAsyncThunk('todo/delete', async (id:number)=>{
-    const todoId = await setTimeout(() => id, 2000);
-    return {todoId}
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    return {id}
 })
