@@ -5,17 +5,25 @@ import { changeTodoDoneStatus, deleteTodo, getTodoList, postNewTodo } from "./fe
 const initialState:{
     data : Itodo[],
     loading : boolean,
-    error : string | null
-} = {
+    error : string | null,
+    filters : "any" | "done" | "not-done"
+ } = {
     data : [],
     loading : false,
-    error : null
+    error : null,
+    filters : "any"
 }
 
 const todoListSlice = createSlice({
     name : "todoList",
     initialState,
-    reducers : {},
+    reducers : {
+        firstSetTodoList : function(state , action : PayloadAction<{todoList : Itodo[]}>){
+            state.loading = false
+            state.error = null
+            state.data = action.payload.todoList
+        }
+    },
     extraReducers : (builder) => {
         builder
             .addCase(getTodoList.pending,(state)=>{
@@ -106,4 +114,5 @@ const todoListSlice = createSlice({
     }
 })
 
+export const { firstSetTodoList } = todoListSlice.actions
 export default todoListSlice.reducer
