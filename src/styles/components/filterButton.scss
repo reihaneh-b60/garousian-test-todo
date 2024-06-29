@@ -1,0 +1,30 @@
+@layer components {
+    .garousian-filterButton{
+        @apply
+            h-[40px]
+            md:h-[48px]
+            font-medium
+            text-[14px]
+            md:text-[16px]
+            border
+            rounded-[4px]
+            flex
+            items-center
+            justify-center
+            gap-[8px]
+            text-[#1D192B]
+            border-[#DEDEDE]
+            hover:bg-[#F6F6F6]
+        ;
+    }
+
+    .garousian-filterButton__selected{
+        @apply
+            border-[#79747E]
+            bg-garousian-blue
+            bg-opacity-[29%]
+            hover:bg-garousian-blue
+        ;
+    }
+
+}

@@ -22,6 +22,9 @@ const todoListSlice = createSlice({
             state.loading = false
             state.error = null
             state.data = action.payload.todoList
+        },
+        changeFilter : function(state,action : PayloadAction<"any" | "done" | "not-done">){
+            state.filters = action.payload
         }
     },
     extraReducers : (builder) => {
@@ -114,5 +117,5 @@ const todoListSlice = createSlice({
     }
 })
 
-export const { firstSetTodoList } = todoListSlice.actions
+export const { firstSetTodoList,changeFilter } = todoListSlice.actions
 export default todoListSlice.reducer
