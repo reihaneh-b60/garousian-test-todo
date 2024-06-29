@@ -2,6 +2,7 @@ import Button from "@/components/common/button"
 import Checkbox from "@/components/common/checkbox"
 import { Itodo } from "@/interface/todo"
 import { changeTodoDoneStatus, deleteTodo } from "@/redux/reducers/todoList/fetch"
+import { AppDispatch } from "@/redux/store"
 import { useDispatch } from "react-redux"
 
 interface Iprops extends Itodo {
@@ -14,7 +15,7 @@ const TodoBox = ({
     text
 }: Iprops) => {
 
-    const dispatch = useDispatch()
+    const dispatch:AppDispatch = useDispatch()
 
     const handleDelete = ()=>{
         dispatch(deleteTodo(id))

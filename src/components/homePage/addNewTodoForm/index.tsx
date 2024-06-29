@@ -3,12 +3,13 @@
 import Button from "@/components/common/button"
 import Input from "@/components/common/input"
 import { postNewTodo } from "@/redux/reducers/todoList/fetch"
+import { AppDispatch } from "@/redux/store"
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 
 const AddNewTodoForm = () => {
 
-    const dispatch = useDispatch()
+    const dispatch:AppDispatch = useDispatch()
 
     const [newTodoInput, setNewTodoInput] = useState("")
 

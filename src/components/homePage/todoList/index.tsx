@@ -2,14 +2,14 @@
 
 import Loading from "@/components/layout/loading"
 import { getTodoList } from "@/redux/reducers/todoList/fetch"
-import { IRootState } from "@/redux/store"
+import { AppDispatch, IRootState } from "@/redux/store"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import TodoBox from "../todoBox"
 
 const TodoList = ()=>{
 
-    const dispatch = useDispatch()
+    const dispatch:AppDispatch = useDispatch()
 
   const {data} = useSelector((state:IRootState) => state.todoList)
 
