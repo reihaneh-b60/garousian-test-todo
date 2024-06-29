@@ -1,0 +1,53 @@
+@layer components {
+    .garousian-btn{
+        @apply
+            flex
+            items-center
+            justify-center
+            gap-[12px]
+            rounded-[4px]
+        ;
+    }
+
+    .garousian-btn-rect{
+        @apply
+            px-[28px]
+            py-[19px]
+        ;
+    }
+
+    .garousian-btn-fill-blue{
+        @apply
+            bg-garousian-blue
+            text-garousian-white
+            fill-garousian-white
+        ;
+    }
+
+    .garousian-btn-fill-red{
+        @apply
+            bg-garousian-red
+            text-garousian-white
+            fill-garousian-white
+        ;
+    }
+
+    .garousian-btn-text-red{
+        @apply
+            bg-garousian-white
+            text-garousian-red
+            fill-garousian-red
+            hover:bg-[#F6F6F6]
+        ;
+    }
+
+    .garousian-btn-text-blue{
+        @apply
+            bg-garousian-white
+            text-garousian-blue
+            fill-garousian-blue
+            hover:bg-[#F6F6F6]
+        ;
+    }
+
+}

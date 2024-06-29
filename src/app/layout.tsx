@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
 import ReduxProvider from "@/components/reduxProvider";
 
 const inter = Vazirmatn({ subsets: ["arabic"] });
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fa" dir="rtl">
       <body className={inter.className}>
         <ReduxProvider>
           {children}

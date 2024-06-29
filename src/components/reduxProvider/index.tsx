@@ -10,9 +10,7 @@ interface Iprops{
 const ReduxProvider = ({children}:Iprops)=>{
     return(
         <Provider store={store}>
-            <>
-                {()=>children}
-            </>
+            {children}
         </Provider>
     )
 }
