@@ -21,6 +21,7 @@ const TodoList = ()=>{
         <div className="w-full flex flex-col gap-[16px] md:gap-[32px]">
               {data.map(item => (
                 <TodoBox
+                    key={item.id}
                      {...item}
                 />
               ))}
