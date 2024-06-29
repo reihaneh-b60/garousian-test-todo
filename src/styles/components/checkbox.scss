@@ -1,0 +1,37 @@
+@layer components {
+    .garousian-checkbox__input{
+        @apply
+            opacity-0
+            w-0
+            h-0
+            absolute
+        ;
+    }
+
+    .garousian-checkbox__wrapper{
+        @apply
+            w-[20px]
+            h-[20px]
+            md:w-[24px]
+            md:h-[24px]
+            flex
+            items-center
+            justify-center
+            rounded-[4px]
+            border-[2px]
+        ;
+    }
+
+    .garousian-checkbox__wrapper--checked{
+        @apply
+            border-garousian-blue
+        ;
+    }
+
+    .garousian-checkbox__wrapper--notchecked{
+        @apply
+            border-[#CCCCCC]
+        ;
+    }
+
+}

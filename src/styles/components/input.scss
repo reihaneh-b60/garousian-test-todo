@@ -1,0 +1,17 @@
+@layer components {
+    .garousian-input{
+        @apply
+            h-[40px]
+            md:h-[50px]
+            border
+            border-[#CCCCCC]
+            rounded-[4px]
+            py-[9px]
+            md:py-[12px]
+            px-[16px]
+            text-garousian-gray-common
+            placeholder:text-[#CCCCCC]
+        ;
+    }
+
+}
