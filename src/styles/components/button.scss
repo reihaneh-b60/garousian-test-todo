@@ -12,7 +12,15 @@
     .garousian-btn-rect{
         @apply
             px-[28px]
-            py-[19px]
+            py-[12px]
+            h-[50px]
+        ;
+    }
+
+    .garousian-btn-square{
+        @apply
+            p-[14px]
+            h-[40px]
         ;
     }
 

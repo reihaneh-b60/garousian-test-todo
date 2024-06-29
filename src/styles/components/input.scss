@@ -1,6 +1,8 @@
 @layer components {
     .garousian-input{
         @apply
+            h-[40px]
+            md:h-[50px]
             border
             border-[#CCCCCC]
             rounded-[4px]

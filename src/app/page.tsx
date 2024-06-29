@@ -1,23 +1,23 @@
-'use client'
+import AddNewTodoForm from "@/components/homePage/addNewTodoForm";
+import TodoList from "@/components/homePage/todoList";
+import PageStatusHandler from "@/components/layout/pageStatusHandler";
 
-import Button from "@/components/common/button";
-import Checkbox from "@/components/common/checkbox";
-import Input from "@/components/common/input";
-import Image from "next/image";
-import { useState } from "react";
 
 export default function Home() {
 
-  const [state,setState] = useState(true)
-
   return (
-    <>
-      <div>init</div>
-      <Button variant="text" color="red">
-        test
-      </Button>
-      <Input placeholder="test"/>
-      <Checkbox setIsChecked={(e:boolean)=>setState(e)} isChecked={state}/>
-    </>
+   <>
+    <PageStatusHandler/>
+    <main className="w-full bg-garousian-white flex items-center justify-center">
+      <div className="w-full max-w-[480px] py-[40px] md:py-[100px] px-[24px] md:px-0">
+        <div className="w-full flex flex-col gap-[30px] md:gap-[50px]">
+          <div className="w-full flex flex-col gap-[24px] md:gap-[50px]">
+            <AddNewTodoForm/>
+            <TodoList/>
+          </div>
+        </div>
+      </div>
+    </main>
+   </>
   );
 }

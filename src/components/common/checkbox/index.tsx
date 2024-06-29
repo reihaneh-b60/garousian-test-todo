@@ -28,7 +28,7 @@ const Checkbox = ({ setIsChecked,isChecked,className, type,checked, ...props }: 
             {isChecked ?
                 <div className="w-[9px] md:w-[11px]">
                     <svg className="w-full" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.5 7.01323L6.01988 10.5L13.5 2.5" stroke="#5274F9" stroke-width="4" stroke-linecap="round" />
+                        <path d="M2.5 7.01323L6.01988 10.5L13.5 2.5" stroke="#5274F9" strokeWidth="4" strokeLinecap="round" />
                     </svg>
                 </div>
                 : null

@@ -17,11 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body className={inter.className}>
-        <ReduxProvider>
+      <ReduxProvider>
+        <body className={inter.className}>
           {children}
-        </ReduxProvider>
-      </body>
+        </body>
+      </ReduxProvider>
     </html>
   );
 }

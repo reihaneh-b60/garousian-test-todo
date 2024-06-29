@@ -1,6 +1,6 @@
 import { Itodo } from "@/interface/todo";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { changeTodoDoneStatus, deleteTodo, getTodoList } from "./fetch";
+import { changeTodoDoneStatus, deleteTodo, getTodoList, postNewTodo } from "./fetch";
 
 const initialState:{
     data : Itodo[],
@@ -30,6 +30,30 @@ const todoListSlice = createSlice({
             })
 
             .addCase(getTodoList.rejected, (state, action) => {
+                state.loading = false;
+                state.error = action.error.message || 'Something went wrong';
+            })
+
+            .addCase(postNewTodo.pending,(state)=>{
+                state.loading = true
+                state.error = null
+            })
+
+            .addCase(postNewTodo.fulfilled,(state,action: PayloadAction<{todoText : string}>)=>{
+                state.loading = false
+                state.error = null
+                let temp = state.data
+
+                temp.push({
+                    id : Date.now(),
+                    is_done : false,
+                    text : action.payload.todoText
+                })
+
+                state.data = temp
+            })
+
+            .addCase(postNewTodo.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message || 'Something went wrong';
             })

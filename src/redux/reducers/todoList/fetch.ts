@@ -6,6 +6,11 @@ export const getTodoList = createAsyncThunk('todoList/get', async () => {
     return data.map((item:any) => ({...item , id : +item.id}));
 });
 
+export const postNewTodo = createAsyncThunk('todo/post', async (todoText : string) => {
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    return {todoText}
+});
+
 export const changeTodoDoneStatus = createAsyncThunk('todo/changeDoneStatus', async (id:number) => {
     await new Promise(resolve => setTimeout(resolve, 2000));
     return {id}
