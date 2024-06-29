@@ -37,6 +37,7 @@ const FilterBox = () => {
         <div className="w-full flex items-center justify-between gap-[12px]">
             {filterMods.map(f => (
                 <FilterButton
+                    key={f.type}
                     isActive={f.type === filters}
                     className="w-full"
                     onClick={() => handleChangeFilter(f.type)}
