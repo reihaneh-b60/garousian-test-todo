@@ -1,7 +1,7 @@
 'use client'
 
 import FilterButton from "@/components/common/filterButton"
-import { changeFilter } from "@/redux/reducers/todoList/slice"
+import { changeFilter, changeLoadingStatus } from "@/redux/reducers/todoList/slice"
 import { IRootState } from "@/redux/store"
 import { useDispatch, useSelector } from "react-redux"
 
@@ -31,6 +31,9 @@ const FilterBox = () => {
 
     const handleChangeFilter = (type: "any" | "done" | "not-done") => {
         dispatch(changeFilter(type))
+        setTimeout(() => {
+            dispatch(changeLoadingStatus())
+        }, 250);
     }
 
     return (
