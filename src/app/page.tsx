@@ -1,4 +1,5 @@
 import Button from "@/components/common/button";
+import Input from "@/components/common/input";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Button variant="text" color="red">
         test
       </Button>
+      <Input placeholder="test"/>
     </>
   );
 }
